@@ -1,0 +1,1 @@
+const carouselImages = document.querySelector(".carousel-images");
