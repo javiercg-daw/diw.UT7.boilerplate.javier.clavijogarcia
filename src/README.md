@@ -1,3 +1,6 @@
+[//]: # (TODO: tabs)
+[//]: # (TODO: carousel)
+
 ## Color Palette
 
     #461E52

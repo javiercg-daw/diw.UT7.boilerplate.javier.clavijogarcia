@@ -39,7 +39,6 @@ header {
   background-color: colors.$darkPurple;
   display: flex;
   padding: 20px 50px;
-  box-sizing: border-box;
 
   nav {
     width: 100%;
@@ -64,6 +63,10 @@ header {
       color: colors.$orange;
     }
 
+    &.active {
+      color: colors.$orange;
+    }
+
   }
 }
 
@@ -79,21 +82,16 @@ main {
 }
 
 #subscribe {
-  background-color: colors.$darkPurple;
-  border-radius: 10px;
-  padding: 20px;
 
 
   .input-element {
     height: 2em;
     border-radius: 5px;
-    padding-right: 10px;
-    box-sizing: border-box;
+    margin-right: 10px;
   }
 
   label {
     padding-right: 10px;
-    box-sizing: border-box;
   }
 
   input {
