@@ -2,6 +2,9 @@
 @use '_reset.scss';
 @use '_fonts.scss';
 
+* {
+  box-sizing: border-box;
+}
 
 html {
   font-family: 'Catamaran', sans-serif;
@@ -28,8 +31,7 @@ h2 {
   @extend .title-font;
   color: colors.$orange;
   font-size: 1.5em;
-  text-align: center;
-  padding: 20px;
+  padding-bottom: 20px;
 }
 
 
@@ -68,7 +70,43 @@ header {
 main {
   padding: 20px 50px;
   background-color: colors.$black;
-  color: colors.$lightPurple
+  color: colors.$lightPurple;
+
+  p {
+    padding-bottom: 20px;
+  }
+
+}
+
+#subscribe {
+  background-color: colors.$darkPurple;
+  border-radius: 10px;
+  padding: 20px;
+
+
+  .input-element {
+    height: 2em;
+    border-radius: 5px;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+
+  label {
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+
+  input {
+    border: 1px solid colors.$midPurple;
+    @extend .input-element;
+  }
+
+  button {
+    background-color: colors.$magenta;
+    color: colors.$darkPurple;
+    border: none;
+    @extend .input-element;
+  }
 }
 
 footer {
