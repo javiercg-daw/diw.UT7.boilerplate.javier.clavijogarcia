@@ -1,16 +1,14 @@
-[//]: # (TODO: tabs)
-[//]: # (TODO: carousel)
+[//]: # (TODO: add images with srcset)
 
-## Color Palette
+[//]: # (TODO: add media &#40;2 videos, 2 audio files&#41;)
 
-    #461E52
-    #DD517F 
-    #E68E36
-    #556DC8
-    #7998EE
+[//]: # (TODO: revise styles & make the page responsive)
 
-## Font
+[//]: # (TODO: rework CSS &#40;add a Sass mixin, etc.&#41;)
+
+## Fonts
 
 https://www.dafont.com/es/outrun-future.font
+https://fonts.google.com/specimen/Catamaran?category=Sans+Serif
 
-[//]: # (TODO: credit author)
+[//]: # (TODO: credit font authors)

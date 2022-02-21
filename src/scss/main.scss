@@ -80,6 +80,11 @@ main {
   padding: 20px 50px;
   background-color: colors.$black;
   color: colors.$lightPurple;
+  width: 100%;
+
+  section {
+    width: 100%;
+  }
 
   p {
     padding-bottom: 20px;
@@ -124,44 +129,48 @@ footer {
 }
 
 .carousel {
-  width: 90%;
-  max-width: 120em;
+  width: 100%;
+  max-width: 100vw;
   background-color: colors.$darkPurple;
-  padding:1em;
+  border-radius: 10px;
+  overflow: hidden;
 
   .carousel-images {
     width: 300%;
-    background-color: #E68E36;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     transition: all .5s ease;
     transform: translateX(0%);
-    padding:1em;
 
     img {
       width: calc(100% / 3);
       min-height: 10vh;
+      height: 80vh;
+      object-fit: cover;
     }
   }
 
   .carousel-dots {
     width: 100%;
     padding: 0.5em;
-    margin: 1em 0 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 
     .dot {
-      width: 1em;
-      height: 1em;
-      margin:1em;
-      background-color: #743EAB;
+      width: 10px;
+      height: 10px;
+      margin: 10px 20px;
+      background-color: colors.$magenta;
+      border-radius: 50%;
+
+      &.active {
+        background-color: colors.$orange;
+      }
     }
   }
-
 
 }

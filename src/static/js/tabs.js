@@ -1,4 +1,9 @@
-import {theGameHTML, screenshotsHTML, subscribeHTML} from "./templates";
+import {theGameHTML, screenshotsHTML, subscribeHTML} from "./templates.js";
+import {addCarouselEventListeners} from "./carousel.js";
+
+const path = window.location.pathname.split("/");
+
+console.log(path);
 
 const theGameTab = document.querySelector("#the-game-tab");
 const screenshotsTab = document.querySelector("#screenshots-tab");
@@ -23,6 +28,7 @@ function switchTabs(event) {
                 break;
             case screenshotsTab:
                 main.insertAdjacentHTML("afterbegin", screenshotsHTML);
+                addCarouselEventListeners();
                 screenshotsTab.classList.add("active");
                 theGameTab.classList.remove("active");
                 subscribeTab.classList.remove("active");

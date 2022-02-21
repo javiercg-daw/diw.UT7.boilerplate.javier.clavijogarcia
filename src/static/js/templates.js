@@ -1,3 +1,16 @@
+const image1 = new URL(
+    "../img/masahiro-miyagi-8jWjoByYtYY-unsplash.jpg?as=webp",
+    import.meta.url
+);
+const image2 = new URL(
+    "../img/placeholder3.jpg?as=webp",
+    import.meta.url
+);
+const image3 = new URL(
+    "../img/shubham-dhage--IT4qmpuYdo-unsplash.jpg",
+    import.meta.url
+);
+
 export const theGameHTML = `
 <section id="the-game" class="active">
     <h2>The Game</h2>
@@ -40,12 +53,12 @@ export const screenshotsHTML = `
     <h2>Screenshots</h2>
     <div class="carousel">
         <div class="carousel-images">
-            <img src="../img/masahiro-miyagi-8jWjoByYtYY-unsplash.jpg" class="carousel-img" alt="Screenshot 1"/>
-            <img src="../img/placeholder3.jpg" class="carousel-img" alt="Screenshot 2"/>
-            <img src="../img/shubham-dhage--IT4qmpuYdo-unsplash.jpg" class="carousel-img" alt="Screenshot 3"/>
+            <img src="${image1}" class="carousel-img" alt="Screenshot 1"/>
+            <img src="${image2}" class="carousel-img" alt="Screenshot 2"/>
+            <img src="${image3}" class="carousel-img" alt="Screenshot 3"/>
         </div>
         <ul class="carousel-dots">
-            <li class="dot"></li>
+            <li class="dot active"></li>
             <li class="dot"></li>
             <li class="dot"></li>
         </ul>
