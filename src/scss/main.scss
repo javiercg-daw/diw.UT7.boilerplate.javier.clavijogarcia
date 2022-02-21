@@ -4,6 +4,7 @@
 
 * {
   box-sizing: border-box;
+  line-height: 1.15;
 }
 
 html {
@@ -94,8 +95,19 @@ main {
 
 figure {
   text-align: center;
-  padding: 20px 0 40px 0 ;
+  padding: 20px 0 40px 0;
 }
+
+.audios {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+  audio {
+    padding: 10px 10px 0 10px;
+  }
+}
+
 
 #subscribe {
   .input-element {
@@ -177,5 +189,15 @@ footer {
       }
     }
   }
+}
 
+#the-game {
+  section {
+    display: flex;
+    align-items: center;
+
+    img {
+      margin: 0;
+    }
+  }
 }

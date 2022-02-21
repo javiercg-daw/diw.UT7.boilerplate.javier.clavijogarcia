@@ -1,5 +1,3 @@
-[//]: # (TODO: add images with srcset)
-
 [//]: # (TODO: revise styles & make the page responsive)
 
 [//]: # (TODO: rework CSS &#40;add a Sass mixin, etc.&#41;)
