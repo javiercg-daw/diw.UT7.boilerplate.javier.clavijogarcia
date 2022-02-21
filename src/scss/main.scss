@@ -38,10 +38,16 @@ h2 {
 header {
   background-color: colors.$darkPurple;
   display: flex;
+  justify-content: space-between;
   padding: 20px 50px;
 
+  .logo {
+    width: 8.33%;
+    height: auto;
+  }
+
   nav {
-    width: 100%;
+    width: 66.67%;
 
     ul {
       //TODO make a flex mixin or something
@@ -118,12 +124,44 @@ footer {
 }
 
 .carousel {
+  width: 90%;
+  max-width: 120em;
+  background-color: colors.$darkPurple;
+  padding:1em;
+
   .carousel-images {
+    width: 300%;
+    background-color: #E68E36;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     transition: all .5s ease;
     transform: translateX(0%);
+    padding:1em;
+
+    img {
+      width: calc(100% / 3);
+      min-height: 10vh;
+    }
   }
+
+  .carousel-dots {
+    width: 100%;
+    padding: 0.5em;
+    margin: 1em 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .dot {
+      width: 1em;
+      height: 1em;
+      margin:1em;
+      background-color: #743EAB;
+    }
+  }
+
+
 }

@@ -44,8 +44,12 @@ export const screenshotsHTML = `
             <img src="../img/placeholder3.jpg" class="carousel-img" alt="Screenshot 2"/>
             <img src="../img/shubham-dhage--IT4qmpuYdo-unsplash.jpg" class="carousel-img" alt="Screenshot 3"/>
         </div>
+        <ul class="carousel-dots">
+            <li class="dot"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+        </ul>
     </div>
-</div>
 </section>
 `;
 
