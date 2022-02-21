@@ -1,6 +1,5 @@
 export function addCarouselEventListeners() {
     const carouselDots = [...document.querySelectorAll(".dot")];
-    debugger
     carouselDots.forEach((dot, index) => {
         dot.addEventListener("click", (event) => showImage(event, index));
     });

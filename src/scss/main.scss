@@ -42,7 +42,7 @@ header {
   padding: 20px 50px;
 
   .logo {
-    width: 8.33%;
+    width: 12%;
     height: auto;
   }
 
@@ -90,6 +90,11 @@ main {
     padding-bottom: 20px;
   }
 
+}
+
+figure {
+  text-align: center;
+  padding: 20px 0 40px 0 ;
 }
 
 #subscribe {
