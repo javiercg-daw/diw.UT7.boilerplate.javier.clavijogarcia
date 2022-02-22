@@ -1,6 +1,7 @@
 @use '_colors.scss';
 @use '_reset.scss';
 @use '_fonts.scss';
+@use '_mixins.scss';
 
 * {
   box-sizing: border-box;
@@ -12,8 +13,7 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+  @include mixins.flex(column, nowrap, flex-start, flex-start);
   min-height: 100vh;
   height: 100vh;
 }
@@ -37,9 +37,9 @@ h2 {
 
 
 header {
+  @include mixins.flex(row, nowrap, space-between, center);
+  width: 100%;
   background-color: colors.$darkPurple;
-  display: flex;
-  justify-content: space-between;
   padding: 10px 50px;
 
   .logo {
@@ -51,12 +51,8 @@ header {
     width: 72%;
 
     ul {
-      //TODO make a flex mixin or something
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      height: 100%;
+      @include mixins.flex(row, nowrap, space-between, center);
+      @include mixins.fill-parent;
     }
   }
 
@@ -88,8 +84,19 @@ main {
     width: 100%;
   }
 
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
   > section {
     min-height: 60vh;
+    animation: fadein 0.5s;
   }
 
   p {
@@ -104,9 +111,8 @@ figure {
 }
 
 .audios {
-  display: flex;
+  @include mixins.flex(row, nowrap, center, center);
   width: 100%;
-  justify-content: center;
 
   audio {
     padding: 10px 10px 0 10px;
@@ -139,8 +145,8 @@ figure {
 }
 
 footer {
+  @include mixins.fill-parent;
   background-color: colors.$darkPurple;
-  height: 100%;
   text-align: center;
   color: colors.$magenta;
   padding: 0 50px;
@@ -159,10 +165,7 @@ footer {
 
   .carousel-images {
     width: 300%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: flex-start;
+    @include mixins.flex(row, nowrap, space-between, flex-start);
     transition: all .5s ease;
     transform: translateX(0%);
 
@@ -177,10 +180,7 @@ footer {
   .carousel-dots {
     width: 100%;
     padding: 0.5em;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    @include mixins.flex(row, nowrap, center, center);
 
     .dot {
       width: 10px;
@@ -198,8 +198,7 @@ footer {
 
 #the-game {
   section {
-    display: flex;
-    align-items: center;
+    @include mixins.flex(row, nowrap, flex-start, center);
 
     img {
       margin: 0;
@@ -207,9 +206,7 @@ footer {
   }
 }
 
-$responsive_breakpoint: 769px;
-
-@media (max-width: $responsive_breakpoint) {
+@media (max-width: 769px) {
   header {
     flex-direction: column;
     align-items: center;
@@ -220,6 +217,10 @@ $responsive_breakpoint: 769px;
 
         li {
           margin-top: 10px;
+
+          a {
+            transition: color 0.2s ease;
+          }
         }
       }
     }
@@ -257,9 +258,7 @@ $responsive_breakpoint: 769px;
 
   main {
     > section {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      @include mixins.flex(column, nowrap, center, flex-start);
     }
   }
 }
