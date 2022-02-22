@@ -88,6 +88,10 @@ main {
     width: 100%;
   }
 
+  > section {
+    min-height: 60vh;
+  }
+
   p {
     padding-bottom: 20px;
   }
@@ -253,7 +257,6 @@ $responsive_breakpoint: 769px;
 
   main {
     > section {
-      min-height: 60vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
