@@ -1,13 +1,25 @@
 const image1 = new URL(
-    "../img/screenshot1.png?as=webp",
+    "../img/screenshot1.png?as=webp&width=1600",
     import.meta.url
 );
 const image2 = new URL(
-    "../img/screenshot2.png?as=webp",
+    "../img/screenshot2.png?as=webp&width=1600",
     import.meta.url
 );
 const image3 = new URL(
-    "../img/screenshot3.png?as=webp",
+    "../img/screenshot3.png?as=webp&width=1600",
+    import.meta.url
+);
+const image1_responsive = new URL(
+    "../img/screenshot1.png?as=webp&width=800",
+    import.meta.url
+);
+const image2_responsive = new URL(
+    "../img/screenshot2.png?as=webp&width=800",
+    import.meta.url
+);
+const image3_responsive = new URL(
+    "../img/screenshot3.png?as=webp&width=800",
     import.meta.url
 );
 
@@ -133,9 +145,18 @@ export const screenshotsHTML = `
     <h2>Screenshots</h2>
     <div class="carousel">
         <div class="carousel-images">
-            <img src="${image1}" class="carousel-img" alt="Screenshot 1"/>
-            <img src="${image2}" class="carousel-img" alt="Screenshot 2"/>
-            <img src="${image3}" class="carousel-img" alt="Screenshot 3"/>
+            <img srcset="${image1_responsive} 800w,${image1} 1600w"
+                sizes="(max-width: 600px) 800w,1600w"
+                src="${image1}"
+                alt="Screenshot 1"/>
+            <img srcset="${image2_responsive} 800w,${image2} 1600w"
+                sizes="(max-width: 600px) 800w,1600w"
+                src="${image1}"
+                alt="Screenshot 2"/>
+            <img srcset="${image3_responsive} 800w,${image3} 1600w"
+                sizes="(max-width: 600px) 800w,1600w"
+                src="${image1}"
+                alt="Screenshot 3"/>
         </div>
         <ul class="carousel-dots">
             <li class="dot active"></li>
